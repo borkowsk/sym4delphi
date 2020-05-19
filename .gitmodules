@@ -1,0 +1,3 @@
+[submodule "Flucto"]
+	path = Flucto
+	url = https://github.com/borkowsk/Flucto.git
