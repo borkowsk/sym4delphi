@@ -1,5 +1,5 @@
 # sym4delphi
-Less or more outdated simulations designed for PASCAL or DELPHI compilers. From 1993-2010 
+Less or more outdated simulations designed for DELPHI compilers. From 2000-2010 
 
 __Epidemic2 - educational example from 2011-14__
 
