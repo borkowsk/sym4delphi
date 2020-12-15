@@ -1,0 +1,39 @@
+4	 #Topology	Typ sieci: 0-losowa,1-pierscieñ,2-ma³e œwiay,3-lepsze ma³e œwiaty,4-hierarchia
+1000	 #Last	Ile wezlów
+2	 #NetParam	Ile przekierowañ albo poziomów hierarchi
+ 1.00000000000000E-0002	 #ERatio	Ile po³aczeñ istnieje realnie
+0	 #Weighted	Czy po³¹czenia wa¿one?
+ 1.00000000000000E+0000	 #NeighTreshold	Ilu s¹siadów musi ju¿ byæ zara¿onych ¿ebyœ siê zarazi³.
+ 1.00000000000000E-0002	 #NoiseMultip	Przez ile przemno¿yæ szum standardowy? I wiêcej tym bardziej rozp³aszczony rozk³ad, ale œrednia 0
+ 0.00000000000000E+0000	 #StartBias	Jakieœ biasy z zakresie
+ 0.00000000000000E+0000	 #EndBias	  
+ 1.00000000000000E+0000	 #Intensity	Last*Intensity - Ile mo¿liwoœci interakcji ka¿dego dnia
+100000	 #Duration	Czas trwania infekcji - mo¿e byæ te¿ na zawsze
+0	 #Immunity	Czas istnienia odpornoœci
+20	 #DefNumberOfSeeds	Podstawowa liczba zasiewów - mo¿e siê zmieniaæ w multieksperymencie
+20	 #SeedFreq	i jakich paczkach
+1	 #SelfDynamicsEnabled	  
+ 9.00000000000000E-0001	 #TreshUp	Wspó³czynnik o jak¹ czêœæ wzrasta próg gdy zara¿enie siê nie powiedzie
+1	 #TreshChangeOneTime	Podwy¿szanie progu raz na epidemiê - musi byæ wtedy wiêkszy wsp.
+ 9.00000000000000E-0001	 #TreshDown	Do jakiej czêœci maleje próg gdy zara¿enie sie UDA
+10000	 #NumberOfRepetition	Ile powtórzeñ eksperymentu
+200	 #NewNetworkRepet	Co ile powtórzeñ zupe³nie nowa sieæ?
+20	 #AmnesyRepet	CO ile powtórzeñ sieæ zapomina SELF
+0	 #SeedIncrFreq	CO ile powtórzeñ zwiêkszamy liczbê "nasion", 0 oznacza nigdy
+10	 #SeedIncrementPerRep	O ile zwiêkszaæ seed jak ju¿ to robimy?
+1	 #SameSeeds	Dla ka¿dej sieci nasiona losowane s¹ raz a¿ do amnezji
+10000	 #SeedIncrementLimit	I do jakiej wartoœci granicznej - potemod pocz¹tku
+1000	 #MaxSteps	Ograniczenie na dlugoœæ pojedynczego eksperymentu
+0	 #UserStopEnable	Czy sprawdzaæ przerwanie symulacji przez u¿ytkownika (SPOWALNIA!)
+3	 #Arrangement	U³o¿enie sieci
+FreeS1000p0,01k2Tr1Se20N0,01SELFu0,90d0,90
+800	 #SWIDTH	Szerokoœæ obszaru roboczego g³ównego okna
+800	 #SHEIGHT	Wysokoœæ obszaru roboczego g³ównego okna
+6	 #Radius	Rozmiar wezla w wizualizacji
+1	 #VisJumps	Czy wizualizowaæ przeskoki infekcji?
+1	 #traceTransmissions	Czy w ogóle œledziæ u¿ycie linków/krawêdzi?
+0	 #VisualiseMeantime	Czy wizualizowaæ w trakcie eksperymentu
+0	 #DelayTime	Czas dla oka, ewentualnie. 1 pozawala na ró¿ne spowolnienia poza samym modelem
+0	 #PrintNumbers	Czy wypisywaæ numeracje wêz³ów
+0	 #LogLevel	Jak szczegó³owo pisac na konsole. 0 - tylko powa¿ne b³edy.
+DO NOT CHANGE POSITION AND NUMBER OF LINES!
