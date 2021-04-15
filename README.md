@@ -23,3 +23,12 @@ Most of them are derived from ALGO models and using **unit ALGO** so be carefull
 If you want to compile source codes, **unit ALGO** is currently available here:
 
 https://github.com/borkowsk/sym4delphi/tree/master/UnitAlgo_v2012
+
+
+Licencing
+
+You can use this software freely for educational and research purposes, but if you feel that it would be appropriate to repay somehow, please finance me a big coffee :-)
+
+https://www.paypal.com/paypalme/wborkowsk
+
+
