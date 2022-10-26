@@ -1,5 +1,5 @@
 # sym4delphi
-## Less or more outdated educational simulations designed for _DELPHI_. From 2000-2010
+## Less or more outdated **educational** simulations designed for _DELPHI_. From 2000-2010
 
 Most of them are derived from ALGO models and using **unit ALGO** so be carefull :-) - do not use "__Paint image__" & "__Save image__" buttons! It may cause application hang in Windows higher than 98 ;-) 
 
