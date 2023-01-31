@@ -34,6 +34,12 @@ https://github.com/borkowsk/sym4delphi/tree/master/UnitAlgo_v2012
 * FB: https://www.facebook.com/ModelowanieProcesowSpolecznych
 * YT: https://www.youtube.com/channel/UCkPtf6-lNlCfNuUdcBgNRug
 
+## Financing
+
+Last works on this repository was partially sponsored by 
+__Centre For Systemic Risk Analisis__
+(https://cbrs.uw.edu.pl/en/home-page/)
+
 ## Licencing
 
 You can use this software freely for educational and research purposes, 
