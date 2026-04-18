@@ -48,8 +48,8 @@ please finance me a big coffee :-)
 
 **COFFEE**
 
-* https://www.buymeacoffee.com/wborkowsk
-* https://www.paypal.com/paypalme/wborkowsk
+[☕☕☕ buycoffee.to](https://buycoffee.to/adalbertus)<br>
+[🪙 🪙  PayPal](https://www.paypal.com/paypalme/wborkowsk)
 
 
 
