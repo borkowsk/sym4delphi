@@ -14,14 +14,14 @@ GTextField WyplataSpinEdit00, WyplataSpinEdit10, WyplataSpinEdit01, WyplataSpinE
 
 //GButton StartButton;
 
-void setupWindowDraw(PApplet appc, GWinData data) {
+void setupWindowDraw(PApplet appc, GWinData data) { //data nie uzywane bo nie ma po co :-D
   appc.background(240);
   
   // Delikatne obrysy sekcji dla przejrzystości (odpowiednik GroupBox z Delphi)
-  appc.stroke(200);
-  appc.noFill();
-  appc.rect(10, 10, 345, 310); // Ramka lewa
-  appc.rect(360, 10, 210, 220); // Ramka tabeli wypłat
+  //appc.stroke(200);
+  //appc.noFill();
+  //appc.rect(10, 10, 345, 310); // Ramka lewa
+  //appc.rect(360, 10, 210, 220); // Ramka tabeli wypłat
 }
 
 void createGUI() {
@@ -92,6 +92,32 @@ void createGUI() {
 
   UzyjWplywuDlaPostawCheckBox = new GCheckbox(setupWindow, 69, 240, 185, 17, "Używaj wpływu dla postaw");
   StresZageszczeniaCheckBox = new GCheckbox(setupWindow, 344, 240, 165, 17, "Stres zageszczenia");
+
+  // --- ETYKIETY (GLabel) ODPOWIADAJĄCE ORYGINAŁOWI Z DELPHI ---
+  
+  // Główne ostrzeżenie na górze
+  GLabel tmp=new GLabel(setupWindow, 8, 10, 480, 20, "UWAGA! Jedynie zmiana parametrów przed uruchomieniem wątku roboczego daje pewność efektu!"); assert(tmp!=null);
+  
+  // Zakładka / Sekcja: Parametry pojedynczego eksperymentu (lewa strona)
+  tmp=new GLabel(setupWindow, 85, 45, 180, 20,  "Długość boku świata symulacji"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 75, 80, 20,   "Liczba postaw"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 105, 120, 20, "Gęstość zaludnienia"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 135, 160, 20, "Maksymalna energia agenta"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 165, 150, 20, "Stopień rozkładu \"Pareto\""); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 195, 210, 20, "Prawdopodobieństwo zmian postaw"); assert(tmp!=null);
+
+  // Kolumna prawa: Koszt i optymalny zapas
+  tmp=new GLabel(setupWindow, 365, 136, 160, 20, "Koszt utrzymania (na krok)"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 365, 160, 180, 20, "Optymalny zapas (w krokach)"); assert(tmp!=null);
+
+  // Tabela wypłat (nagłówki osi)
+  tmp=new GLabel(setupWindow, 305, 55, 64, 20, "Kooperacja"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 305, 95, 67, 20, "Rywalizacja"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 375, 30, 64, 20, "Kooperacja"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 450, 30, 67, 20, "Rywalizacja"); assert(tmp!=null);
+
+  // Dół formularza: Rdzeń nazwy pliku
+  tmp=new GLabel(setupWindow, 344, 290, 180, 20, "Rdzeń nazwy pliku wyjściowego"); assert(tmp!=null);
 
   setupWindow.loop();
 }
