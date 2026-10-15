@@ -25,13 +25,14 @@ void setupWindowDraw(PApplet appc, GWinData data) { //data nie uzywane bo nie ma
 }
 
 void createGUI() {
+  G4P.messagesEnabled(false);
   setupWindow = GWindow.getWindow(this, "Ustawienia symulacji", 0, 0, 600, 400, JAVA2D);
-  setupWindow.noLoop();
+  setupWindow.noLoop(); //<>//
   setupWindow.addDrawHandler(this,"setupWindowDraw");
   
   // Etykiety i pola sterujące w oknie G4P
   OKButton = new GButton(setupWindow, 225, 355, 153, 25, "OK / Zastosuj");
-  OKButton.addEventHandler(this, "OKButtonClick"); //<>//
+  OKButton.addEventHandler(this, "OKButtonClick");
   
   //StartButton = new GButton(setupWindow, 400, 395, 153, 25, "START / RESET");
   //StartButton.addEventHandler(this, "StartButtonClick");
@@ -119,6 +120,7 @@ void createGUI() {
   // Dół formularza: Rdzeń nazwy pliku
   tmp=new GLabel(setupWindow, 360, 280, 260, 25, "Rdzeń nazwy pliku wyjściowego"); assert(tmp!=null);
 
+  G4P.messagesEnabled(true);
   setupWindow.loop();
 }
 
@@ -126,6 +128,7 @@ void createGUI() {
 public void OKButtonClick(GButton button, GEvent event) {
   if (event == GEvent.CLICKED) { //<>//
     println("OK clicked - simulation will start.");
+    ileTrzeba=(Bok+2)*(Rozmiar+Brzeg);
     UzyjWplywuDlaPostaw = UzyjWplywuDlaPostawCheckBox.isSelected();
     if(UzyjWplywuDlaPostaw) println("Social influence on attitudes is active.");
     StresZageszczenia = StresZageszczeniaCheckBox.isSelected();
@@ -205,5 +208,14 @@ public void WyplataSpinEdit01Change(GTextField field, GEvent event) {
     TabelaWyp[0][1] = val;
     TabelaWyp[1][0] = -val;
     WyplataSpinEdit10.setText(str(-val));
+  } catch(Exception e) {}
+}
+
+public void WyplataSpinEdit10Change(GTextField field, GEvent event) {
+  try {
+    int val = int(field.getText());
+    TabelaWyp[0][1] = val;
+    TabelaWyp[1][0] = -val;
+    WyplataSpinEdit01.setText(str(-val));
   } catch(Exception e) {}
 }
