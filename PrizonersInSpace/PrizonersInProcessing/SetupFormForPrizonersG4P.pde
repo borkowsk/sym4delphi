@@ -25,18 +25,18 @@ void setupWindowDraw(PApplet appc, GWinData data) { //data nie uzywane bo nie ma
 }
 
 void createGUI() {
-  setupWindow = GWindow.getWindow(this, "Ustawienia symulacji", 0, 0, 613, 433, JAVA2D);
+  setupWindow = GWindow.getWindow(this, "Ustawienia symulacji", 0, 0, 600, 400, JAVA2D);
   setupWindow.noLoop();
   setupWindow.addDrawHandler(this,"setupWindowDraw");
   
   // Etykiety i pola sterujące w oknie G4P
-  OKButton = new GButton(setupWindow, 225, 395, 153, 25, "OK / Zastosuj");
+  OKButton = new GButton(setupWindow, 225, 355, 153, 25, "OK / Zastosuj");
   OKButton.addEventHandler(this, "OKButtonClick"); //<>//
   
   //StartButton = new GButton(setupWindow, 400, 395, 153, 25, "START / RESET");
   //StartButton.addEventHandler(this, "StartButtonClick");
   
-  RdzenStringEdit = new GTextField(setupWindow, 3, 285, 330, 21);
+  RdzenStringEdit = new GTextField(setupWindow, 8, 280, 340, 25);
   RdzenStringEdit.setText(FileNameCore);
   RdzenStringEdit.addEventHandler(this, "RdzenStringEditChange");
   
@@ -57,11 +57,11 @@ void createGUI() {
   MaxSilaSpinEdit1.setText(str(MaxSila));
   MaxSilaSpinEdit1.addEventHandler(this, "MaxSilaSpinEdit1Change");
 
-  RozkladSpinEdit = new GTextField(setupWindow, 17, 180, 65, 22);
+  RozkladSpinEdit = new GTextField(setupWindow, 16, 180, 65, 22);
   RozkladSpinEdit.setText(str(Rozklad));
   RozkladSpinEdit.addEventHandler(this, "RozkladSpinEditChange");
 
-  PoziomSzumuEdit = new GTextField(setupWindow, 17, 210, 65, 22);
+  PoziomSzumuEdit = new GTextField(setupWindow, 16, 210, 65, 22);
   PoziomSzumuEdit.setText(str((float)PoziomSzumu));
   PoziomSzumuEdit.addEventHandler(this, "PoziomSzumuEditChange");
 
@@ -74,19 +74,19 @@ void createGUI() {
   OptimumZapasuSpinEdit.addEventHandler(this, "OptimumZapasuSpinEditChange");
 
   // Tabela wypłat
-  WyplataSpinEdit00 = new GTextField(setupWindow, 88, 250, 57, 22);
+  WyplataSpinEdit00 = new GTextField(setupWindow, 375, 60, 70, 25);
   WyplataSpinEdit00.setText(str(TabelaWyp[0][0]));
   WyplataSpinEdit00.addEventHandler(this, "WyplataSpinEdit00Change");
 
-  WyplataSpinEdit10 = new GTextField(setupWindow, 160, 250, 57, 22);
+  WyplataSpinEdit10 = new GTextField(setupWindow, 450, 60, 70, 25);
   WyplataSpinEdit10.setText(str(TabelaWyp[1][0]));
-  WyplataSpinEdit10.setEnabled(false);
+  WyplataSpinEdit10.addEventHandler(this, "WyplataSpinEdit10Change");
 
-  WyplataSpinEdit01 = new GTextField(setupWindow, 88, 290, 57, 22);
+  WyplataSpinEdit01 = new GTextField(setupWindow, 375, 90, 70, 25);
   WyplataSpinEdit01.setText(str(TabelaWyp[0][1]));
   WyplataSpinEdit01.addEventHandler(this, "WyplataSpinEdit01Change");
 
-  WyplataSpinEdit11 = new GTextField(setupWindow, 160, 290, 57, 22);
+  WyplataSpinEdit11 = new GTextField(setupWindow, 450, 90, 70, 25);
   WyplataSpinEdit11.setText(str(TabelaWyp[1][1]));
   WyplataSpinEdit11.addEventHandler(this, "WyplataSpinEdit11Change");
 
@@ -96,28 +96,28 @@ void createGUI() {
   // --- ETYKIETY (GLabel) ODPOWIADAJĄCE ORYGINAŁOWI Z DELPHI ---
   
   // Główne ostrzeżenie na górze
-  GLabel tmp=new GLabel(setupWindow, 8, 10, 480, 20, "UWAGA! Jedynie zmiana parametrów przed uruchomieniem wątku roboczego daje pewność efektu!"); assert(tmp!=null);
+  GLabel tmp=new GLabel(setupWindow, 8, 5, 480, 30, "UWAGA! Jedynie zmiana parametrów przed uruchomieniem wątku roboczego daje pewność efektu!"); assert(tmp!=null);
   
   // Zakładka / Sekcja: Parametry pojedynczego eksperymentu (lewa strona)
-  tmp=new GLabel(setupWindow, 85, 45, 180, 20,  "Długość boku świata symulacji"); assert(tmp!=null);
-  tmp=new GLabel(setupWindow, 85, 75, 80, 20,   "Liczba postaw"); assert(tmp!=null);
-  tmp=new GLabel(setupWindow, 85, 105, 120, 20, "Gęstość zaludnienia"); assert(tmp!=null);
-  tmp=new GLabel(setupWindow, 85, 135, 160, 20, "Maksymalna energia agenta"); assert(tmp!=null);
-  tmp=new GLabel(setupWindow, 85, 165, 150, 20, "Stopień rozkładu \"Pareto\""); assert(tmp!=null);
-  tmp=new GLabel(setupWindow, 85, 195, 210, 20, "Prawdopodobieństwo zmian postaw"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 60, 180, 20,  "Długość boku świata symulacji"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 90, 180, 20,  "Liczba postaw"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 120, 180, 20, "Gęstość zaludnienia"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 150, 180, 20, "Maksymalna energia agenta"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 180, 180, 20, "Stopień rozkładu \"Pareto\""); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 85, 210, 210, 20, "Prawdopodobieństwo zmian postaw"); assert(tmp!=null);
 
   // Kolumna prawa: Koszt i optymalny zapas
-  tmp=new GLabel(setupWindow, 365, 136, 160, 20, "Koszt utrzymania (na krok)"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 365, 130, 160, 20, "Koszt utrzymania (na krok)"); assert(tmp!=null);
   tmp=new GLabel(setupWindow, 365, 160, 180, 20, "Optymalny zapas (w krokach)"); assert(tmp!=null);
 
   // Tabela wypłat (nagłówki osi)
-  tmp=new GLabel(setupWindow, 305, 55, 64, 20, "Kooperacja"); assert(tmp!=null);
-  tmp=new GLabel(setupWindow, 305, 95, 67, 20, "Rywalizacja"); assert(tmp!=null);
-  tmp=new GLabel(setupWindow, 375, 30, 64, 20, "Kooperacja"); assert(tmp!=null);
-  tmp=new GLabel(setupWindow, 450, 30, 67, 20, "Rywalizacja"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 305, 60, 70, 25, "Kooperacja"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 305, 90, 70, 25, "Rywalizacja"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 375, 30, 70, 25, "Kooperacja"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 450, 30, 70, 25, "Rywalizacja"); assert(tmp!=null);
 
   // Dół formularza: Rdzeń nazwy pliku
-  tmp=new GLabel(setupWindow, 344, 290, 180, 20, "Rdzeń nazwy pliku wyjściowego"); assert(tmp!=null);
+  tmp=new GLabel(setupWindow, 360, 280, 260, 25, "Rdzeń nazwy pliku wyjściowego"); assert(tmp!=null);
 
   setupWindow.loop();
 }
